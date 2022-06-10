@@ -1,0 +1,139 @@
+
+
+
+/* 이미지 슬라이드 */
+
+.section input[id*="slide"]{
+	display: none;
+}
+.section .slidewrap{
+	width: 100%;
+	max-height: 700px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.section .slidelist{
+	white-space: nowrap;
+	font-size: 0;
+}
+.section .slidelist > li{
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	transition: all .5s;
+}
+.section .slidelist > li > a{
+	display: block;
+	position: relative;
+}
+.section .slidelist > li > a > img{
+	width: 100%;
+	max-height: initial;
+	margin-top: -10%;
+}
+.section .slidelist label{
+	position: absolute;
+	z-index: 10;
+	top: 50%;
+	transform: translateY(-75%);
+	padding: 50px;
+	cursor: pointer;
+}
+.section .slidelist .left{
+	left: 30px;
+	background: url('/img/left.png') center center / 100% no-repeat;
+	background-size: 50%;
+}
+.section .slidelist .right{
+	right: 30px;
+	background: url('/img/right.png') center center / 100% no-repeat;
+	background-size: 50%;
+}
+
+.section [id="slide01"]:checked ~ .slidewrap .slidelist > li{
+	transform: translateX(0%);
+}
+.section [id="slide02"]:checked ~ .slidewrap .slidelist > li{
+	transform: translateX(-100%);
+}
+.section [id="slide03"]:checked ~ .slidewrap .slidelist > li{
+	transform: translateX(-200%);
+}
+.section [id="slide04"]:checked ~ .slidewrap .slidelist > li{
+	transform: translateX(-300%);
+}
+
+
+/* 차량 검색 */
+.carsearch{
+    width: 100%;
+	height: 120px; 
+	background: none;
+	position: relative;
+	overflow: hidden;
+	margin-top: 40px;
+	border-bottom: 2px solid #333;
+}
+
+table .smart_car_search{
+	max-width: 1300px;
+	margin: 0 auto;
+	width: 100%;
+}
+.carsearch .colgroup{
+	width: 25%;
+	
+}
+.today{
+	display: table-row-group;
+	vertical-align: middle;
+
+}
+.carsearch .smart_car_search .tr .td{
+	box-sizing: border-box;
+	text-align: center;
+	padding: 10px 20px;
+}
+.carsearch .smart_car_search h4{
+	text-align: left;
+	font-size: 50px;
+	line-height: 30px;
+	display: block;
+	font-weight: bold;
+}
+.carsearch .scs_radio {
+	border-bottom: solid 1px gray;
+}
+span.scs_radio{
+	width: 33.3%;
+	float: left;
+	padding: 5px 0;
+	box-sizing: border-box
+	line-height: 24px;
+	text-align: center;
+}
+.smart_car_search label{
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	font-size: 22px;
+}
+.smart_car_search td select{
+	font-size: 18px;
+	width: 90%;
+	border: none;
+	height: 40px;
+	padding: 0 10px;
+	overflow: visible;
+}
+table.smart_car_search td button{
+	border-radius: 10px;
+	color: white;
+	background-color: #333;
+	border: none;
+	font-size: 20px;
+	cursor: pointer;
+	width: 100%;
+	line-height: 20px;
+	height: 35px;
+}

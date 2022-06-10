@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<!--  web.xml 은 톰캣 서비스가 시작될 때 각종 설정을 읽어서 톰캣에 저장한다.
+			파일을 수정하면 톰캣 서비스를 다시 시작해야함
+			오류가 발생하면 톰캣 서비스가 작동되지 않음
+		 -->
+  <display-name>MVC_M2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>pis.html</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+  	<param-name>INIT_PARAM</param-name>
+  	<param-value>web.xml에 저장한 초기화 매개변수</param-value>
+  </context-param>
+
+  <context-param>
+  	<param-name>OracleDriver</param-name>
+  	<param-value>oracle.jdbc.OracleDriver</param-value>
+  </context-param>
+   <context-param>
+  	<param-name>OracleURL</param-name>
+  	<param-value>jdbc:oracle:thin:@localhost:1521:xe</param-value>
+  </context-param>
+   <context-param>
+  	<param-name>OracleId</param-name>
+  	<param-value>hr</param-value>
+  </context-param>
+   <context-param>
+  	<param-name>OraclePwd</param-name>
+  	<param-value>hr</param-value>
+  </context-param>
+  
+  <session-config>
+  	<session-timeout>20</session-timeout>
+  </session-config>
+  
+  <filter>
+  	<filter-name>SetCharEncoding</filter-name>
+  	<filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+  		<init-param>
+  			<param-name>encoding</param-name>
+  			<param-value>utf-8</param-value>
+  		</init-param>
+  </filter>
+  <filter-mapping>
+  	<filter-name>SetCharEncoding</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <context-param>
+  	<param-name>POSTS_PER_PAGE</param-name>
+  	<param-value>5</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>PAGES_PER_BLOCK</param-name>
+  	<param-value>5</param-value>
+  </context-param>
+   <context-param>
+  	<param-name>maxPostSize</param-name>
+  	<param-value>1024000</param-value>
+  </context-param>
+  
+  
+  <!-- servlet 설정 -->
+  
+  <servlet>
+   <servlet-name>FreeboardList</servlet-name>
+   <servlet-class>model2.freeboard.ListController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>FreeboardList</servlet-name>
+   <url-pattern>/freeboard/list.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+   <servlet-name>FreeboardWrite</servlet-name>
+   <servlet-class>model2.freeboard.WriteController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>FreeboardWrite</servlet-name>
+   <url-pattern>/Solo/write.do</url-pattern>
+  </servlet-mapping>
+
+
+  
+</web-app>

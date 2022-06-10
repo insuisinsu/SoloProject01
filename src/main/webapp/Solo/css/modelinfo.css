@@ -1,0 +1,259 @@
+.rentlist{
+    width: 100%;
+    height: auto;
+    float: left;
+    background: #fff;
+}
+.rent_inner{
+    max-width: 1300px;
+    margin: 0 auto;
+    height: auto;
+}
+.rent_box1{
+    width: 30%;
+    float: left;
+    margin: 60px 0;
+    border: 1px solid #000;
+}
+.rent_box2{
+    width: 70%;
+    float: left;
+    margin-top: 60px;
+}
+/* 좌측 예약 */
+/* 날짜 */
+.select_date {
+    border: none;
+    background: #fff;
+    padding: 13px 7px 5px;
+    position: relative;
+}
+.select_date button {
+    border: none;
+    background: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+}
+.select_date button >dl {
+    float: right;
+    margin-right: 10px;
+}
+.select_date button >dl dt {
+    font-size: 12px;
+    color: #444;
+    font-weight: bold;
+    border: solid 2px #222;
+    display: inline-block;
+    padding: 1px 5px 3px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.select_date button dl dd {
+    margin: 0 auto;
+}
+h2 {
+    font-size: 22px;
+    line-height: 21px;
+    font-weight: normal;
+}
+.clicktimedate h6 {
+    color: #8c8c9b;
+    font-weight: normal;
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 15px;
+}
+
+/* 선택 */
+.select_serch {
+    background: #f2f3f8;
+    padding: 3px 14px;
+    min-width: 320px;
+}
+.select_serch_inner {
+    background: #fff;
+    padding: 0 10px;
+    border-radius: 5px;
+    margin: 6px 0;
+}
+.select_serch_title {
+    width: 25%;
+    display: inline-block;
+    box-sizing: border-box;
+    letter-spacing: -1px;
+}
+.select_serch_content {
+    width: 73%;
+    display: inline-block;
+    height: auto;
+    vertical-align: middle;
+    border-left: solid 1px #f2f3f8;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    position: relative;
+}
+select.select_area_half {
+    font-size: 12px;
+    width: 48%;
+    border: none;
+    color: #3e3e47;
+    height: 22px;
+}
+.select_serch_content input {
+    font-size: 12px;
+    border: none;
+    height: 22px;
+    line-height: 25px;
+    color: #3e3e47;
+    width: 48%;
+    position: relative;
+    background: none;
+}
+select.select_area {
+    font-size: 12px;
+    width: 100%;
+    border: none;
+    color: #3e3e47;
+    height: 22px;
+}
+
+/* 버튼 */
+.selct_btn {
+    width: 100%;
+    background: #444;
+    text-align: center;
+    box-sizing: border-box;
+    float: right;
+    height: 48px;
+}
+.selct_btn button, .selct_btn a {
+    background: none;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+    padding: 13px 0px 0px;
+    display: block;
+}
+
+/* 우측 예약 */
+
+.rent_detail {
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+p.car_brand {
+    font-size: 20px;
+    border: solid 2px;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+p.car_name {
+    font-size: 32px;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;
+}
+.rent_detail .middle {
+    margin: 20px 0;
+}
+.car_imgbox {
+    width: 40%;
+    float: left;
+    display: block;
+}
+.car_imgbox .car_img img{
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 5px 20px #dadada;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.car_img div {
+    margin: 5px 5px;
+}
+.car_img h6 {
+    display: inline-block;
+    border: solid 2px #dbdde9;
+    padding: 3px 10px;
+    border-radius: 5px;
+    color: #333;
+}
+
+.car_textbox1 {
+    width: 60%;
+    float: left;
+    padding: 0px 0px 20px 20px;
+    box-sizing: border-box;
+}
+h5 {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #aaa;
+}
+.rent1_table {
+    width: 100%;
+    background: #ddd;
+    border-radius: 7px;
+    margin: 10px 0;
+}
+.rent1_table thead{
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.rent1_table tbody{
+    text-align: center;
+    font-size: 14px;
+}
+.rent1_table tbody td{
+    padding: 20px 10px;
+    font-size: 13px;
+    line-height: 15px;
+}
+h6 {
+    font-size: 13px;
+    line-height: 15px;
+}
+.car_textbox2 table {
+    width: 100%;
+    background: #ddd;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+.car_textbox2 table tbody td {
+    padding: 20px 10px;
+    border-bottom: solid 1px #e6e6ef;
+    text-align: left;
+}
+
+.left_event_btn{
+    position: static;
+    float: left;
+    margin-top: 20px;
+}
+.left_event_btn a {
+    text-decoration: none;
+    padding: 7px 25px ;
+    line-height: 20px;
+    font-size: 13px;
+    border: 1px solid #aaa;
+    border-radius: 7px;
+}

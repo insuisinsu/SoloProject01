@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K3</title>
+    <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modelinfo.css">
+</head>
+
+<header>
+    <div class="inner">
+        <h1><a href="index.html">렌트카를 인수하자!</a></h1>           
+        <ul id="gnb">
+            <li><a href="#">차종/요금</a></li>
+            <li><a href="#">이용방법</a></li>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">대여소위치</a></li>
+            <li><a href="#">고객센터</a></li>
+        </ul>
+
+        <ul class="util">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Create Account</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="rentlist">
+        <div class="rent_inner">
+            <!-- 좌측 예약 -->
+            <div class="rent_box1">
+                <form name="#" action="#" method="post">
+                    <div class="select_date">
+                        <button type="button">
+                            <dl class="dtover" style="float: left;">
+                                <dt>대여 일시</dt>
+                                <dd>
+                                    <div class="clicktimedate">
+                                        <h2 id="cal1_sdate">03.27</h2>
+                                        <h6 id="cal1_syear">2022 / 일요일 <span style="color: #007efe;">09:00</span></h6>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <div class="dtover3" style="float: left;">화살표</div>
+                            <dl class="dtover2"style="float: right;">
+                                <dt>반납 일시</dt>
+                                <dd>
+                                    <div class="clicktimedate">
+                                        <h2 id="cal2_sdate">03.28</h2>
+                                        <h6 id="cal2_syear">2022 / 월요일 <span style="color: #007efe;">09:00</span></h6>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </button>
+                    </div>
+                    <div class="select_serch">
+                        <div class="select_serch_inner">
+                            <div class="select_serch_title">
+                                <p>차종</p>
+                            </div>
+                            <div class="select_serch_content cartype">
+                                <select name="car_type" class="select_area_half">
+                                                            <option value="경차/소형">경차/소형</option>
+                                                            <option value="준중형">준중형</option>
+                                                            <option value="중형">중형</option>
+                                                            <option value="대형">대형</option>
+                                                            <option value="고급">고급</option>
+                                                            <option value="수입차">수입차</option>
+                                                            <option value="RV/승합차">RV/승합차</option>
+                                                        </select>
+                                <input placeholder="차량명 입력" style="text-align: center">
+                            </div>
+                        </div>
+                        <div class="select_serch_inner">
+                            <div class="select_serch_title">
+                                <p>지점</p>
+                            </div>
+                            <div class="select_serch_content">
+                                <select name="area" class="select_area">
+                                    <option value="서울">서울</option>
+                                    <option value="인천">인천</option>
+                                    <option value="일본">일본</option>
+                                    <option value="중국">중국</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="select_serch_inner">
+                            <div class="select_serch_title">
+                                <p>신청자명</p>
+                            </div>
+                            <div class="select_serch_content">
+                                <input type="text" name="name" placeholder="이름을 입력하세요">
+                            </div>
+                        </div>
+                        <div class="select_serch_inner">
+                            <div class="select_serch_title">
+                                <p>개인 연락처</p>
+                            </div>
+                            <div class="select_serch_content">
+                                <input type="text" name="tel" placeholder="연락처를 입력하세요">
+                            </div>
+                        </div>
+                        <div class="select_serch_inner">
+                            <div class="select_serch_title">
+                                <p>생년월일</p>
+                            </div>
+                            <div class="select_serch_content">
+                                <button type="button" class="calendar" >달력</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="selct_btn" style="background: #007efe;">
+                        <button type="submit" >
+                            예약 신청하기
+                        </button>
+                    </div>
+                    <div class="selct_btn">
+                        <a href="tel:1588-3082">
+                            1588 - 3082 전화걸기
+                        </a>
+                    </div>
+                </form>
+            </div>
+<!-- 모델 안내 -->
+            <div class="rent_box2">
+                <div class="rent_detail">
+                    <div class="high">
+                        <p class="car_brand">기아</p>
+                        <p class="car_name">K3</p>
+                    </div>
+                    <div class="middle">
+                        <div class="car_imgbox">
+                            <div class="car_img">
+                                <img src="/img/K3.png" alt="">
+                                <div><h6>내비게이션, 블랙박스, 후방카메라, 블루투스 포함</h6></div>
+                            </div>
+                        </div>
+                        <div class="car_textbox1">
+                            <h5>요금 안내 (단위:원)</h5>
+                            <table class="rent1_table">
+                                <colgroup><col width="20%"><col width="20%"><col width="20%"><col width="20%"><col width="20%"></colgroup>
+                                <thead>
+                                    <tr>
+                                        <td rowspan="2" style="background-color: #555; color: white; border-top-left-radius: 10px;">단기</td>
+                                        <td colspan="3" style="background-color: #666; color: white; border-top-right-radius: 10px;">대여기간</td>
+                                    </tr>
+                                    <tr style="background-color: #666; color: white;">
+                                        <td>1일</td>
+                                        <td>3일</td>
+                                        <td>5일</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="background: #f2f2f7;">평일 가격</td>
+                                        <td>39,900</td>
+                                        <td>59,900</td>
+                                        <td> - </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background: #f2f2f7; border-bottom-left-radius: 7px;">주말/공휴일</td>
+                                        <td>49,900</td>
+                                        <td>69,900 </td>
+                                        <td> - </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background: #f2f2f7; border-bottom-left-radius: 7px;">자차보험</td>
+                                        <td colspan="3">10,000 (별도)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h6 style="font-weight: normal; color:#3e3e47">
+                                ※ 주말, 성수기 및 특별할인 기간에는 가격이 많이 비싸집니다..<br>
+                                ※ 추가할인을 원하시면 전화문의 부탁드립니다.<br>
+                                ※ 렌트요금은 같은 차종이라 하더라도 사장님 기분에 따라 다를 수 있습니다.<br>
+                                ※ 딜리버리(별도) : 편도 10,000원 / 왕복 15,000원
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="car_textbox2">
+                            <h5 style="color: #8c8c9b;">연장 및 기타 요금안내</h5>
+                            <table>
+                                <colgroup>
+                                    <col width="25%"><col width="75%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <td style="background: #9b9ba8; border-top-left-radius: 7px;">구분</td>
+                                        <td style="background: #8c8c9b; border-top-right-radius: 7px;">적용 요금</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>대여연장 반환초과 (시간당)</td>
+                                        <td>경차~중형 : 5,000원 / 준대형~대형(RV,SUV포함) : 10,000원 / 고급~수입 : 15,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>휴차손해</td>
+                                        <td>소요시간 해당의 배차요금 50%</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-bottom-left-radius: 7px;">차량세차비</td>
+                                        <td style="border-bottom-right-radius: 7px;">광택작업 필요시 : 10만원 / 애완동물 탑승시 : 2만원</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h6 style="font-weight: normal; color:#3e3e47">
+                                <br>※ 모든 차량은 금연차량으로 운영되고 있습니다. 흡연 적발시, 차량 세차비 10만원이 청구됩니다.
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="event_btn">
+                        <div class="left_event_btn">
+                            <a href="#">목록</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+</div>
+
+ <!-- best car -->
+ <script type="text/javascript"> 
+    //<![CDATA[
+    function calcHeight(){
+     //find the height of the internal page
+    
+     var the_height=
+     document.getElementById('the_iframe').contentWindow.
+     document.body.scrollHeight;
+    
+     //change the height of the iframe
+     document.getElementById('the_iframe').height=
+     the_height;
+    
+     //document.getElementById('the_iframe').scrolling = "no";
+     document.getElementById('the_iframe').style.overflow = "hidden";
+    }
+    //
+    </script>
+<iframe src="best_car_section.html" id="the_iframe"
+onload="calcHeight();" name="" title="" frameborder="0" scrolling="no"
+style="overflow-x:hidden; overflow:auto; width:100%; min-height:500px;">
+</iframe>
+
+<footer>
+    <div class="inner">
+        <div class="upper">
+            <h1>렌트카를 인수하자!</h1>
+            <ul>
+                <li><a href="#">Policy</a></li>
+                <li><a href="#">Family Site</a></li>
+                <li><a href="#">Sitemap</a></li>
+            </ul>
+        </div>
+
+        <div class="lower">
+            <address>
+                우리집에 왜 왔니.<br>
+                TEL : 031-1111-1234 C.P : 010-1234-1234
+            </address>
+            <p>
+                2022 저작권 없으니 마음껏 가져가세요.
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+package model2.freeboard;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import utils.BoardPage;
+
+
+public class ListController extends HttpServlet{
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		FreeboardDAO dao = new FreeboardDAO();
+		
+		//뷰에 전달할 매개변수 저장용 맵 생성
+		Map<String, Object> map = new HashMap<String, Object>();
+		
+		String searchField = req.getParameter("searchField");
+		String searchWord = req.getParameter("searchWordk");
+		if(searchWord != null) {
+			// 쿼리스트링으로 전달받은 매개변수 중 검색어가 있다면 map 에 저장
+			map.put("searchField",  searchField);
+			map.put("searchWord",  searchWord);
+		}
+		int totalCount = dao.selectCount(map);	//게시물 개수
+		
+		
+		
+		
+		/* 페이지 처리 Start */
+		//web.xml 에 셋팅된 변수값 불러오기 
+		ServletContext application = getServletContext(); 
+		int pageSize = Integer.parseInt(application.getInitParameter("POSTS_PER_PAGE")); 
+		int blockPage = Integer.parseInt(application.getInitParameter("PAGES_PER_BLOCK"));
+		
+		//현재 페이지 확인 
+		int pageNum = 1; 
+		String pageTemp = req.getParameter("pageNum");  
+		if (pageTemp != null && !pageTemp.equals("")) {
+			pageNum = Integer.parseInt(pageTemp); 	//  값이 비어 있지 않을때 넘오논 페이지 변수를 정수로 변환해서 저장 
+		}
+		
+		//목록에 출력할 게시물 범위 계산 
+		int start = (pageNum -1) * pageSize + 1 ;  //첫 게시물 번호 
+		int end = pageNum * pageSize;     //마지막 게시물 번호 
+		
+		//뷰 페이지에 값 전달
+		map.put("start", start); 
+		map.put("end", end);
+		
+		/* 페이징 처리 부분 end */ 
+	
+		
+		// 게시물 목록을 받아오기 (DAO 객체에 작업을 전달 )
+			//boardLists는 DB의 레코드를 담은 DTO객체(5개) 를 담고 있다. 
+		
+        List<FreeboardDTO> boardLists = dao.selectListPage(map);  // 게시물 목록 받기
+        dao.close(); // DB 연결 닫기
+	
+		//뷰페이지에 전달 할 매개변수들을 추가 
+	        //utils.BoardPage : 페이징 처리하는 클래스, pagingStr 메소드 는 static 메소드임
+	    String pagingImg = BoardPage.pagingStr(totalCount, pageSize,
+	            blockPage, pageNum, "../Solo/List.do");  // 바로가기 영역 HTML 문자열
+	    //View 페이지로 변수 값 전달
+	    map.put("pagingImg", pagingImg);
+	    map.put("totalCount", totalCount);
+	    map.put("pageSize", pageSize);
+	    map.put("pageNum", pageNum); 
+		
+		//뷰페이지로 데이터 전달, request 영역에 전달할 데이터를 저장후 List.jsp (뷰페이지) 로 포워드 
+	    req.setAttribute("boardLists", boardLists);	//DataBase 에서 Select 한 결과값
+	    req.setAttribute("map", map);
+	    req.getRequestDispatcher("/Solo/List.jsp").forward(req, resp);
+			
+		
+		
+		
+	}
+}

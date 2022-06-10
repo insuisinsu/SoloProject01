@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>렌트카를 인수하자!</title>
+    <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/best_car.css">
+    <script src="js/ie.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <h1><a href="index.html">렌트카를 인수하자!</a></h1>           
+            <ul id="gnb">
+                <li><a href="#">차종/요금</a></li>
+                <li><a href="#">이용방법</a></li>
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">대여소위치</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+
+            <ul class="util">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Create Account</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+<!-- 이미지 슬라이드 -->
+    <div class="section">
+        <input type="radio" name="slide" id="slide01" checked>
+        <input type="radio" name="slide" id="slide02">
+        <input type="radio" name="slide" id="slide03">
+        <input type="radio" name="slide" id="slide04">
+        <div class="slidewrap">
+            <ul class="slidelist">
+                <li class="slideitem">
+                    <a href="">
+                        <label for="slide04" class="left"></label>
+                        <img src="./img/slide01.png" alt="">
+                        <label for="slide02" class="right"></label>
+                    </a>
+                </li>
+                <li class="slideitem">
+                    <a href="">
+                        <label for="slide01" class="left"></label>
+                        <img src="./img/slide02.png" alt="">
+                        <label for="slide03" class="right"></label>
+                    </a>
+                </li>
+                <li class="slideitem">
+                    <a href="">
+                        <label for="slide02" class="left"></label>
+                        <img src="./img/slide03.png" alt="">
+                        <label for="slide04" class="right"></label>
+                    </a>
+                </li>
+                <li class="slideitem">
+                    <a href="">
+                        <label for="slide03" class="left"></label>
+                        <img src="./img/slide04.png" alt="">
+                        <label for="slide01" class="right"></label>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+<!-- 차량 검색 -->
+    <div class="carsearch">
+        <table class="smart_car_search">
+            <colgroup class ="colgroup">
+                <col width="25%"><col width="25%"><col width="25%"><col width="25%">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td rowspan="2" style="border-bottom: none; border-right: 1px solid #dbdde9;">
+                        <h4>CAR SEARCH</h4>
+                    </td>
+                    <td colspan="3">
+                        <span class="scs_radio">
+                            <input type="radio" name="category" id="scs1" value="1" checked="">
+                            <label for="scs1">단기대여</label>
+                        </span>
+                        <span class="scs_radio">
+                            <input type="radio" name="category" id="scs2" value="2">
+                            <label for="scs2">월대여</label>
+                        </span>
+                        <span class="scs_radio">
+                            <input type="radio" name="category" id="scs3" value="3">
+                            <label for="scs3">장기대여</label>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="a2_item">
+                            <option selected>차종 선택</option>
+                            <option value="경차/소형">작은 차</option>
+                            <option value="준중형">큰 차</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="a1_item">
+                            <option selected>제조사 선택</option>
+                            <option value="현대">현대</option>
+                            <option value="기아">기아</option>
+                            <option value="수입차">수입차</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button type="submit">검색하기</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- best car -->
+<div class="best_car_section">
+    <div class="dep">
+        <div class="best_car_look">
+            <ul>
+                <li><a href="#" class="selected">단기 인기차종</a></li>
+                <li><a href="#" class="selected">월 인기차종</a></li>
+                <li><a href="#" class="selected">장기 인기차종</a></li>
+            </ul>
+        </div>
+        <h3 class="main_title">인기 차종</h3> 
+    </div>
+    <div class="slide_box">
+        <div class="best_car">
+            <ul class="best_car_ul">
+                <li>
+                    <div class="topdan">
+                        <p>단기대여</p>
+                        <a href="k3.html"><img src="img/K3.png" alt="#"></a>
+                    </div>
+                    <div class="buttom">
+                        <div class="car_name">
+                            <p>K3</p>
+                        </div>
+                    </div>
+                    <div class="buttom2">
+                        <div class="box">
+                            <div class="wid50 text">평일 24시간</div>
+                            <div class="wid50 pay">59,000</div>
+                            <div class="wid50 text">주말 24시간</div>
+                            <div class="wid50 pay">69,000</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="topdan">
+                        <p>단기대여</p>
+                        <a href="#"><img src="img/K3.png" alt="#"></a>
+                    </div>
+                    <div class="buttom">
+                        <div class="car_name">
+                            <p>Avante</p>
+                        </div>
+                    </div>
+                    <div class="buttom2">
+                        <div class="box">
+                            <div class="wid50 text">평일 24시간</div>
+                            <div class="wid50 pay">59,000</div>
+                            <div class="wid50 text">주말 24시간</div>
+                            <div class="wid50 pay">69,000</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="topdan">
+                        <p>단기대여</p>
+                        <a href="#"><img src="img/K3.png" alt="#"></a>
+                    </div>
+                    <div class="buttom">
+                        <div class="car_name">
+                            <p>K5</p>
+                        </div>
+                    </div>
+                    <div class="buttom2">
+                        <div class="box">
+                            <div class="wid50 text">평일 24시간</div>
+                            <div class="wid50 pay">69,000</div>
+                            <div class="wid50 text">주말 24시간</div>
+                            <div class="wid50 pay">79,000</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="topdan">
+                        <p>단기대여</p>
+                        <a href="#"><img src="img/K3.png" alt="#"></a>
+                    </div>
+                    <div class="buttom">
+                        <div class="car_name">
+                            <p>K7</p>
+                        </div>
+                    </div>
+                    <div class="buttom2">
+                        <div class="box">
+                            <div class="wid50 text">평일 24시간</div>
+                            <div class="wid50 pay">89,000</div>
+                            <div class="wid50 text">주말 24시간</div>
+                            <div class="wid50 pay">99,000</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="topdan">
+                        <p>단기대여</p>
+                        <a href="#"><img src="img/K3.png" alt="#"></a>
+                    </div>
+                    <div class="buttom">
+                        <div class="car_name">
+                            <p>K7</p>
+                        </div>
+                    </div>
+                    <div class="buttom2">
+                        <div class="box">
+                            <div class="wid50 text">평일 24시간</div>
+                            <div class="wid50 pay">89,000</div>
+                            <div class="wid50 text">주말 24시간</div>
+                            <div class="wid50 pay">99,000</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="topdan">
+                        <p>단기대여</p>
+                        <a href="#"><img src="img/K3.png" alt="#"></a>
+                    </div>
+                    <div class="buttom">
+                        <div class="car_name">
+                            <p>K7</p>
+                        </div>
+                    </div>
+                    <div class="buttom2">
+                        <div class="box">
+                            <div class="wid50 text">평일 24시간</div>
+                            <div class="wid50 pay">89,000</div>
+                            <div class="wid50 text">주말 24시간</div>
+                            <div class="wid50 pay">99,000</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="topdan">
+                        <p>단기대여</p>
+                        <a href="#"><img src="img/K3.png" alt="#"></a>
+                    </div>
+                    <div class="buttom">
+                        <div class="car_name">
+                            <p>K7</p>
+                        </div>
+                    </div>
+                    <div class="buttom2">
+                        <div class="box">
+                            <div class="wid50 text">평일 24시간</div>
+                            <div class="wid50 pay">89,000</div>
+                            <div class="wid50 text">주말 24시간</div>
+                            <div class="wid50 pay">99,000</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="topdan">
+                        <p>단기대여</p>
+                        <a href="#"><img src="img/K3.png" alt="#"></a>
+                    </div>
+                    <div class="buttom">
+                        <div class="car_name">
+                            <p>K7</p>
+                        </div>
+                    </div>
+                    <div class="buttom2">
+                        <div class="box">
+                            <div class="wid50 text">평일 24시간</div>
+                            <div class="wid50 pay">89,000</div>
+                            <div class="wid50 text">주말 24시간</div>
+                            <div class="wid50 pay">99,000</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="topdan">
+                        <p>단기대여</p>
+                        <a href="#"><img src="img/K3.png" alt="#"></a>
+                    </div>
+                    <div class="buttom">
+                        <div class="car_name">
+                            <p>K7</p>
+                        </div>
+                    </div>
+                    <div class="buttom2">
+                        <div class="box">
+                            <div class="wid50 text">평일 24시간</div>
+                            <div class="wid50 pay">89,000</div>
+                            <div class="wid50 text">주말 24시간</div>
+                            <div class="wid50 pay">99,000</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="topdan">
+                        <p>단기대여</p>
+                        <a href="#"><img src="img/K3.png" alt="#"></a>
+                    </div>
+                    <div class="buttom">
+                        <div class="car_name">
+                            <p>K7</p>
+                        </div>
+                    </div>
+                    <div class="buttom2">
+                        <div class="box">
+                            <div class="wid50 text">평일 24시간</div>
+                            <div class="wid50 pay">89,000</div>
+                            <div class="wid50 text">주말 24시간</div>
+                            <div class="wid50 pay">99,000</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+
+    
+
+    <footer>
+        <div class="inner">
+            <div class="upper">
+                <h1>렌트카를 인수하자!</h1>
+                <ul>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Family Site</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+
+            <div class="lower">
+                <address>
+                    인천광역시<br>
+                    TEL : 031-1111-1234 C.P : 010-1234-1234
+                </address>
+                <p>
+                    저작권 없음
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

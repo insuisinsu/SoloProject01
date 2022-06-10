@@ -1,0 +1,188 @@
+
+/* 인기차종 */
+@media  screen and (max-width:1300px) {
+	
+}
+*{
+}
+
+/* best car */
+.dep{
+	width: 100%;
+	height: auto;
+	margin: 50px 0;
+	display: inline-block;
+	background-color: #ddd;
+}
+.best_car{
+	width: 100%;
+	margin: auto;
+}
+.best_car_look{
+	width: 100%;
+	height: auto;
+	margin: 50px 0 70px 0;
+}
+.best_car_look ul{
+	width: 70%;
+	margin: auto;
+	list-style: none;
+	line-height: 30px;
+	padding-inline-start: 40px;
+}
+.best_car_look ul li {
+	width: 33.3%;
+	float: left;
+	text-align: center;
+	padding: 0 10px;
+	box-sizing: border-box;
+	line-height: 24px;
+}
+.best_car_look ul li a:hover{
+	color: #000;
+	font-size: 22px;
+	background-color: #ddd;
+	border: 4px solid gray;
+	border-radius: 20%;
+	transition-duration: 0.6s;
+}
+.best_car_look a.selected{
+	background-color: #333;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 20px;
+	display: block;
+	border-radius: 5px;
+}
+h3.main_title{
+	width: 100%;
+	text-align: center;
+	margin: 50px 0;
+	font-size: 24px;
+	line-height: 32px;
+	color: #333;
+	display: inline-block;
+}
+
+/* 인기차종 */
+@media  screen and (max-width:1300px) {
+	
+}
+.slide_box{
+	position: relative;
+	display: block;
+}
+.best_car{
+	background: #ddd;
+	overflow: hidden;
+	padding-bottom: 40px;
+	position: relative;
+	display: block;
+}
+.best_car_ul{
+	width: 80%;
+	margin: auto;
+	position: relative;
+	vertical-align: middle;
+	list-style: none;
+	line-height: 24px;
+}
+.best_car li{
+	width: 30%;
+	float: left;
+	position: relative;
+	padding: 10px 10px 20px;
+	margin: 10px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	background: white;
+
+	
+}
+.best_car ul li .topdan{
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	background: white;
+	border-radius: 10px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom: solid 1px #333;
+	padding: 10px;
+	min-height: 200px;
+	text-align: left;
+}
+.best_car .topdan p {
+	color: #333;
+	font-weight: bold;
+	text-align: left;
+	border: solid 2px #333;
+	display: inline-block;
+	padding: 5px 10px;
+	border-radius: 8px;
+	position: absolute;
+	line-height: 24px;
+}
+.best_car ul li .topdan img{
+	display: block;
+	margin: 0 auto;
+	border: 0;
+	max-width: 100%;
+	height: auto;
+	cursor: pointer;
+}
+.best_car ul li .buttom{
+	background: white;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	display: block;
+}
+.best_car .car_name{
+	padding: 18px 0px;
+	display: block;
+	cursor: pointer;
+}
+.best_car ul li .buttom p{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.best_car ul li .buttom2{
+	background: white;
+	padding: 10px 15px 20px;
+}
+.best_car ul li .buttom2 .box{
+	width: 100%;
+	height: 100%;
+	background-color: whitesmoke;
+	border-radius: 7px;
+	border: solid 2px #999;
+	display: block;
+	cursor: pointer;
+}
+.best_car ul li .buttom2 .box .wid50.text{
+	color: #333;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: solid 2px #999;
+	width: 50%;
+	float: left;
+	padding: 10px;
+	box-sizing: border-box;
+	display: inline-block;
+}
+.best_car ul li .buttom2 .box .wid50.pay{
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+	text-align: right;
+	border-bottom: solid 2px #999;
+	width: 50%;
+	float: right;
+	padding: 10px;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+
