@@ -7,6 +7,7 @@ import java.util.Date;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,6 +17,7 @@ import com.oreilly.servlet.MultipartRequest;
 import utils.FileUtil;
 import utils.JSFunction;
 
+@WebServlet("insert.do")
 public class WriteController extends HttpServlet {
 
 	@Override
@@ -83,9 +85,9 @@ public class WriteController extends HttpServlet {
 						dto.setSfile(newFileName);	//서버에 저장될 파일 이름
 					}
 					
-					//DTO의 객체를 DAO 의 insertWrite(dto) 메소드를 호출해서 DB에 저장
+					//DTO의 객체를 DAO 의 insertBoard(dto) 메소드를 호출해서 DB에 저장
 					FreeboardDAO dao = new FreeboardDAO();
-					int result = dao.insertWrite(dto);
+					int result = dao.insertBoard(dto);
 					//객체 종료 메소드 호출(rs, stmt, psmt, con 모두 종료)
 					dao.close();
 					

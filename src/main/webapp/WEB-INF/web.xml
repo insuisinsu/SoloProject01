@@ -85,7 +85,7 @@
   </servlet>
   <servlet-mapping>
    <servlet-name>FreeboardWrite</servlet-name>
-   <url-pattern>/Solo/write.do</url-pattern>
+   <url-pattern>/freeboard/write.do</url-pattern>
   </servlet-mapping>
 
 

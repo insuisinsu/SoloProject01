@@ -6,10 +6,10 @@ public class FreeboardDTO {
 	private String title;
 	private String content;
 	private java.sql.Date postdate;
-	private String visitcount;
+	private int visitcount;
 	private String ofile;
 	private String sfile;
-	private String downcount;
+	private int downcount;
 	
 	public String getOfile() {
 		return ofile;
@@ -23,10 +23,10 @@ public class FreeboardDTO {
 	public void setSfile(String sfile) {
 		this.sfile = sfile;
 	}
-	public String getDowncount() {
+	public int getDowncount() {
 		return downcount;
 	}
-	public void setDowncount(String downcount) {
+	public void setDowncount(int downcount) {
 		this.downcount = downcount;
 	}
 	public String getNum() {
@@ -59,10 +59,10 @@ public class FreeboardDTO {
 	public void setUserid(String userid) {
 		this.userid = userid;
 	}
-	public String getVisitcount() {
+	public int getVisitcount() {
 		return visitcount;
 	}
-	public void setVisitcount(String visitcount) {
+	public void setVisitcount(int visitcount) {
 		this.visitcount = visitcount;
 	}
 	

@@ -80,7 +80,7 @@ public class FreeboardDAO extends JDBConnect{
 					dto.setContent(rs.getString("content"));
 					dto.setPostdate(rs.getDate("postdate"));
 					dto.setUserid(rs.getString("userid"));
-					dto.setVisitcount(rs.getString("visitcount"));
+					dto.setVisitcount(rs.getInt("visitcount"));
 
 					bbs.add(dto);
 					
@@ -95,7 +95,7 @@ public class FreeboardDAO extends JDBConnect{
 		}
 		
 		//게시글 데이터를 받아 DB에 추가합니다.
-		public int insertWrite(FreeboardDTO dto) {
+		public int insertBoard(FreeboardDTO dto) {
 			int result = 0;
 			
 			try {
@@ -123,7 +123,36 @@ public class FreeboardDAO extends JDBConnect{
 		
 	
 		
-		// 지정한 게시물을 찾아 내용을 반환합니다.
+		// 지정한 게시물을 찾아 내용을 반환합니다. 상세보기
+		
+		public FreeboardDTO getBoard(String num) {
+			FreeboardDTO dto = new FreeboardDTO();
+			String query = "SELECT * FROM freeboard WHERE num=?";
+			try {
+				psmt = con.prepareStatement(query);
+				psmt.setString(1, num);
+				rs = psmt.executeQuery();
+				
+				if(rs.next()) {
+					dto.setNum(rs.getString(1));
+					dto.setUserid(rs.getString(2));
+					dto.setTitle(rs.getString(3));
+					dto.setContent(rs.getString(4));
+					dto.setPostdate(rs.getDate(5));
+					dto.setVisitcount(rs.getInt(6));
+					dto.setOfile(rs.getString(7));
+					dto.setSfile(rs.getString(8));
+					dto.setDowncount(rs.getInt(9));
+				}
+				
+			}catch(Exception e){
+				System.out.println("게시물 상세보기 중 예외 발생");
+				e.printStackTrace();
+			}
+			return dto;
+		}
+		
+		/*   
 		public FreeboardDTO selectView(String num) {
 			FreeboardDTO dto = new FreeboardDTO();
 			
@@ -151,7 +180,7 @@ public class FreeboardDAO extends JDBConnect{
 			}
 			return dto;
 		}
-		
+		*/
 	
 		//지정한 게시물의 조회수를 1 증가시킨다.
 		public void updateVisitCount(String num) {
@@ -164,13 +193,14 @@ public class FreeboardDAO extends JDBConnect{
 				psmt.setString(1, num);
 				rs = psmt.executeQuery();
 			}catch(Exception e) {
-				
+				System.out.println("게시물 조회수 증가 중 예외 발생");
+				e.printStackTrace();
 			}
 		}
 		
 		
 		//지정한 게시물을 수정합니다.
-		public int updateEdit(FreeboardDTO dto) {
+		public int updateBoard(FreeboardDTO dto) {
 			int result = 0;
 			
 			try {
@@ -194,7 +224,7 @@ public class FreeboardDAO extends JDBConnect{
 		}
 		
 		// 지정한 게시물 삭제
-		public int deletePost(FreeboardDTO dto) {
+		public int deleteBoard(FreeboardDTO dto) {
 			int result = 0;
 			
 			try {
@@ -209,6 +239,25 @@ public class FreeboardDAO extends JDBConnect{
 			}
 			
 			return result;
+		}
+		
+		
+		
+		// 다운로드 횟수를 1 증가시킴
+		public void downCountPlus(String num) {
+			String sql = "UPDATE freeboard SET "
+						+" downcount=downcount+1 "
+						+" WHERE num=? ";
+			
+			try {
+				psmt = con.prepareStatement(sql);
+				psmt.setString(1, num);
+				psmt.execute();
+			}catch(Exception e) {
+				System.out.println("다운로드 횟수 증가 중 예외 발생");
+				e.printStackTrace();
+			}
+			
 		}
 		
 }

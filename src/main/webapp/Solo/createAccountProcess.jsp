@@ -27,7 +27,7 @@ dao.close();
 if(result == 1){
 	response.sendRedirect("Login.jsp");
 }else{
-	JSFunction.alertBack("회원가입 실패", out);
+	JSFunction.alertBack(response, "회원가입 실패");
 }
 
 
