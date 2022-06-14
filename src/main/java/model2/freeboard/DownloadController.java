@@ -12,7 +12,7 @@ import utils.FileUtil;
 
 
 
-public class DownloadContoller extends HttpServlet {
+public class DownloadController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
