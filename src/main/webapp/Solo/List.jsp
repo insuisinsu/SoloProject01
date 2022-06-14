@@ -13,7 +13,6 @@
 
 <!-- Header -->
 <%@ include file="../Solo/Header.jsp" %>
-   
 
     <!-- 검색 폼 -->
     <form method="get">  
@@ -52,18 +51,18 @@
     <c:otherwise>  <!-- 게시물이 있을 때 -->
         <c:forEach items="${ boardLists }" var="row" varStatus="loop">    
         <tr align="center">
-            <td>  <!-- 번호 -->
+             <td>  <!-- 번호 -->
                 ${ map.totalCount - (((map.pageNum-1) * map.pageSize) + loop.index)}   
             </td>
             <td align="left">  <!-- 제목(링크) -->
-                <a href="../Solo/view.do?idx=${ row.idx }">${ row.title }</a> 
+   		         <a href="../freeboard/view.do?num=${ row.num }">${ row.title }</a>
             </td> 
-            <td>${ row.name }</td>  <!-- 작성자 -->
+            <td>${ row.userid }</td>  <!-- 작성자 -->
             <td>${ row.visitcount }</td>  <!-- 조회수 -->
-            <td>${ row.postdate }</td>  <!-- 작성일 -->
-            <td>  <!-- 첨부 파일 -->
+            <td>${ row.postdate }</td>  <!-- 작성일 --> 
+            <td>  <!-- 첨부 파일 --> 
             <c:if test="${ not empty row.ofile }">
-                <a href="../Solo/download.do?ofile=${ row.ofile }&sfile=${ row.sfile }&idx=${ row.idx }">[Down]</a>
+                <a href="../freeboard/download.do?ofile=${ row.ofile }&sfile=${ row.sfile }&num=${ row.num }">[Down]</a>
             </c:if>
             </td>
         </tr>
@@ -79,7 +78,7 @@
                 ${ map.pagingImg }
             </td>
             <td width="100"><button type="button"
-                onclick="location.href='../Solo/write.do';">글쓰기</button></td>
+                onclick="location.href='../freeboard/write.do'">글쓰기</button></td>
         </tr>
     </table>
     

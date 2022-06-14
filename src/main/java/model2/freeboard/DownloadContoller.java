@@ -12,7 +12,6 @@ import utils.FileUtil;
 
 
 
-@WebServlet("/mvcboard/download.do")
 public class DownloadContoller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

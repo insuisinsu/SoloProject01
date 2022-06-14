@@ -87,7 +87,22 @@
    <servlet-name>FreeboardWrite</servlet-name>
    <url-pattern>/freeboard/write.do</url-pattern>
   </servlet-mapping>
-
-
   
+  <servlet>
+   <servlet-name>FreeboardView</servlet-name>
+   <servlet-class>model2.freeboard.ViewController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>FreeboardView</servlet-name>
+   <url-pattern>/freeboard/view.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+   <servlet-name>FreeboardDownload</servlet-name>
+   <servlet-class>model2.freeboard.DownloadController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>FreeboardDownload</servlet-name>
+   <url-pattern>/freeboard/download.do</url-pattern>
+  </servlet-mapping>
 </web-app>

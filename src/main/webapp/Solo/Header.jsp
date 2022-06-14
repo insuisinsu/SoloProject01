@@ -4,7 +4,7 @@
 <html>
 <head>
 	<script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="/SoloProject01/Solo/css/style.css">
 	<title>Insert title here</title>
 </head>
 <body>

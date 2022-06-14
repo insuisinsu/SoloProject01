@@ -62,7 +62,6 @@ public class AccountDAO extends JDBConnect {
 			
 			System.out.println(query);
 		}catch(Exception e) {
-			System.out.println(dto.getIdx()+dto.getUserName());
 			System.out.println("계정 생성 중 예외 발생");
 			e.printStackTrace();
 		}

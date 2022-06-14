@@ -69,7 +69,7 @@ public class ListController extends HttpServlet{
 		//뷰페이지에 전달 할 매개변수들을 추가 
 	        //utils.BoardPage : 페이징 처리하는 클래스, pagingStr 메소드 는 static 메소드임
 	    String pagingImg = BoardPage.pagingStr(totalCount, pageSize,
-	            blockPage, pageNum, "../Solo/List.do");  // 바로가기 영역 HTML 문자열
+	            blockPage, pageNum, "/SoloProject01/freeboard/list.do");  // 바로가기 영역 HTML 문자열
 	    //View 페이지로 변수 값 전달
 	    map.put("pagingImg", pagingImg);
 	    map.put("totalCount", totalCount);

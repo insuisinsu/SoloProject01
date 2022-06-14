@@ -7,12 +7,12 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 		function validateForm (form){
-			if(form.title.value == "" || form.title.value.length==){
+			if(!form.title.value){
 				alert("제목을 입력하새요");
 				form.title.focus();
 				return false;
 			}
-			if(form.content.value == "" || form.content.value.length==){
+			if(!form.content.value){
 				alert("내용 입력하새요");
 				form.content.focus();
 				return false;
@@ -39,7 +39,8 @@
 			<td>작성자</td>
 			<td>
 				<!-- 로그인한 계정의 id 를 가져와야됨 -->
-				${dto.userid }
+				<%-- ${dto.userid } --%>
+				<input name="userid" type="text" value="test" > 
 			</td>
 		</tr>
 		<tr>

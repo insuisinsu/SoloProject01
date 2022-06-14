@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 
 
-@WebServlet("/freeboard/view.do")
 public class ViewController extends HttpServlet{
 
 	@Override
@@ -25,7 +24,7 @@ public class ViewController extends HttpServlet{
 		dao.updateVisitCount(num); 
 		
 		//게시물의 자세한 정보 값 가져오기
-		FreeboardDTO dto = dao.selectView(num); 
+		FreeboardDTO dto = dao.getBoard(num); 
 		dao.close();   //객체 반납 
 		
 		//DataBase 의  content 컬럼의 \r\n  <== <<Enter>>을 "<br /> 태그로 변환 
@@ -33,7 +32,7 @@ public class ViewController extends HttpServlet{
 		
 		//게시물 (dto) 객체를 view페이지로 전달하기 변수 값 저장 
 		req.setAttribute("dto", dto); 
-		req.getRequestDispatcher("/freeboard/View.jsp").forward(req, resp); 
+		req.getRequestDispatcher("/Solo/View.jsp").forward(req, resp); 
 								// /Solo/View.jsp 아닌가? 
 		
 	}

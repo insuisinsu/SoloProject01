@@ -17,7 +17,7 @@ import com.oreilly.servlet.MultipartRequest;
 import utils.FileUtil;
 import utils.JSFunction;
 
-@WebServlet("insert.do")
+
 public class WriteController extends HttpServlet {
 
 	@Override
@@ -35,7 +35,7 @@ public class WriteController extends HttpServlet {
 				
 				//1. 파일 업로드 처리
 					//saveDirectory 변수에 업로드할 파일을 저장할 서버의 물리적인 경로를 저장
-					String saveDirectory = req.getServletContext().getRealPath("/Uploads");
+					String saveDirectory = req.getServletContext().getRealPath("/Solo/Uploads");
 					
 					//maxPostSize : 업로드할 최대 용량 (web.xml 에 1MB 로 잡혀있음) 그걸 불러올 거임
 					ServletContext application = getServletContext();
