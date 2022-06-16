@@ -1,13 +1,13 @@
 
 
 
-/* 이미지 슬라이드 */
+/* �씠誘몄� �뒳�씪�씠�뱶 */
 
 .section input[id*="slide"]{
 	display: none;
 }
 .section .slidewrap{
-	width: 100%;
+	width: 1080px;
 	max-height: 700px;
 	margin: 0 auto;
 	overflow: hidden;
@@ -64,7 +64,7 @@
 }
 
 
-/* 차량 검색 */
+/* 李⑤웾 寃��깋 */
 .carsearch{
     width: 100%;
 	height: 120px; 

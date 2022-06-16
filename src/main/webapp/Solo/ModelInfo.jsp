@@ -7,6 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- Header -->
+<%@ include file="../Solo/Header.jsp" %>
+
 <!-- 모델 상세 -->
+
+<!-- 검색탭 -->
+
+<!-- 상품 리스트  -->
+
+<!-- Footer -->
+<%@ include file="../Solo/Footer.jsp" %>
 </body>
 </html>
