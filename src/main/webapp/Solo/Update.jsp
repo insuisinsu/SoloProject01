@@ -6,17 +6,17 @@
 <head>
 <title>Insert title here</title>
 <script type="text/javascript">
-		function validateForm (form){
-			if(form.title.value == "" || form.title.value.length==){
-				alert("제목을 입력하새요");
-				form.title.focus();
-				return false;
-			}
-			if(form.content.value == "" || form.content.value.length==){
-				alert("내용 입력하새요");
-				form.content.focus();
-				return false;
-			}
+function validateForm (form){
+	if(!form.title.value){
+		alert("제목을 입력하세요");
+		form.title.focus();
+		return false;
+	}
+	if(!form.content.value){
+		alert("내용 입력하세요");
+		form.content.focus();
+		return false;
+	}
 		}
 </script>
 </head>
@@ -24,34 +24,36 @@
 
 <jsp:include page="../Solo/Header.jsp" />
 <h2>회원제 게시판 - 글쓰기(Write)</h2>
-<form name="writeFrm" method="post" enctype="multipart/form-data" action="../freeboard/write.do"
+<form name="writeFrm" method="post" enctype="multipart/form-data" action="../freeboard/update.do"
 		onsubmit="return validateForm(this)">
-		<input type="hidden" name="userid" value="${dto.userid }" />
+	<input type="hidden" name ="num" value ="${dto.num }">
 	<table border="1" width="90%">
 	
 		<tr>
 			<td>제목</td>
 			<td>
-				<input type="text" name="title" style="width: 90%;" />
+				<input type="text" name="title" style="width: 90%;" value="${dto.title }" />
 			</td>
 		</tr>
 		<tr>
 			<td>작성자</td>
 			<td>
-				<!-- 로그인한 계정의 id 를 가져와야됨 -->
 				${dto.userid }
+				<input type="hidden" name="userid" value="${dto.userid }" />
 			</td>
 		</tr>
 		<tr>
 			<td>내용</td>
 			<td>
-				<textarea name="content" style="width: 90%; height: 100px;"></textarea>
+				<textarea name="content" style="width: 90%; height: 100px;">${dto.content }</textarea>
 			</td>
 		</tr>
 		<tr>
 			<td>첨부파일</td>
 			<td>
 				<input type="file" name="ofile"  />
+			<input type="hidden" name = prevOfile value ="${dto.ofile }">
+			<input type="hidden" name = prevSfile value = "${dto.sfile }">
 			</td>
 		</tr>
 		<tr>

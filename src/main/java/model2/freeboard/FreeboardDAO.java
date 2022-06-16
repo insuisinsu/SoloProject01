@@ -76,11 +76,14 @@ public class FreeboardDAO extends JDBConnect{
 					FreeboardDTO dto = new FreeboardDTO();
 					
 					dto.setNum(rs.getString("num"));
+					dto.setUserid(rs.getString("userid"));
 					dto.setTitle(rs.getString("title"));
 					dto.setContent(rs.getString("content"));
 					dto.setPostdate(rs.getDate("postdate"));
-					dto.setUserid(rs.getString("userid"));
 					dto.setVisitcount(rs.getInt("visitcount"));
+					dto.setOfile(rs.getString("ofile"));
+					dto.setSfile(rs.getString("sfile"));
+					dto.setDowncount(rs.getInt("downcount"));
 
 					bbs.add(dto);
 					
@@ -110,7 +113,6 @@ public class FreeboardDAO extends JDBConnect{
 				psmt.setString(3, dto.getContent());
 				psmt.setString(4, dto.getOfile());
 				psmt.setString(5, dto.getSfile());
-				
 				result = psmt.executeUpdate();
 				
 			}catch(Exception e) {
@@ -205,13 +207,14 @@ public class FreeboardDAO extends JDBConnect{
 			
 			try {
 				String query = " UPDATE freeboard SET "
-							+ " title=?, content=? "
+							+ " title=?, content=?, userid=?"
 							+ " WHERE num=? ";
 				
 				psmt = con.prepareStatement(query);
 				psmt.setString(1, dto.getTitle());
 				psmt.setString(2, dto.getContent());
-				psmt.setString(3, dto.getNum());
+				psmt.setString(3, dto.getUserid());
+				psmt.setString(4, dto.getNum());
 				
 				result = psmt.executeUpdate();
 				

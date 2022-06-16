@@ -78,6 +78,13 @@ button{cursor: pointer;}
 	color: #333; font-size: 14px; font-weight: bold;
 }
 
+.check{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border: 1px solid;
+	
+}
 
 
 

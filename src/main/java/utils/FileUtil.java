@@ -72,4 +72,15 @@ public class FileUtil {
 			e.printStackTrace();
 		}
 	}
+	
+	//글 삭제시에 파일 업로드된 폴더의 파일도 함께 삭제 
+	public static void deleteFile (HttpServletRequest req, 
+			String directory, String filename) {
+		//매개변수 directory 에 인자의 서버의 업로드 폴더의 절대경로 
+		String sDirectory = req.getServletContext().getRealPath(directory); 
+		File file = new File (sDirectory + File.separator + filename); 
+		if (file.exists()) {
+			file.delete(); 
+		}
+	}
 }

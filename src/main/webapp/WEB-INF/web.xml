@@ -89,12 +89,30 @@
   </servlet-mapping>
   
   <servlet>
+   <servlet-name>FreeboardUpdate</servlet-name>
+   <servlet-class>model2.freeboard.UpdateController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>FreeboardUpdate</servlet-name>
+   <url-pattern>/freeboard/update.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
    <servlet-name>FreeboardView</servlet-name>
    <servlet-class>model2.freeboard.ViewController</servlet-class>
   </servlet>
   <servlet-mapping>
    <servlet-name>FreeboardView</servlet-name>
    <url-pattern>/freeboard/view.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+   <servlet-name>FreeboardDelete</servlet-name>
+   <servlet-class>model2.freeboard.DeleteController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>FreeboardDelete</servlet-name>
+   <url-pattern>/freeboard/deleteBoard.do</url-pattern>
   </servlet-mapping>
   
   <servlet>

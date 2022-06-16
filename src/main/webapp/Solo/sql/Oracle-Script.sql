@@ -60,4 +60,9 @@ drop sequence seq_freeboard_num;
     
 select * from useraccount;
 select * from freeboard;
+desc freeboard;
 commit;
+
+UPDATE freeboard
+SET title='avbcshdj', content='abcdefg, userid='test'
+WHERE num='2'

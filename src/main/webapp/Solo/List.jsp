@@ -60,7 +60,7 @@
             <td>${ row.userid }</td>  <!-- 작성자 -->
             <td>${ row.visitcount }</td>  <!-- 조회수 -->
             <td>${ row.postdate }</td>  <!-- 작성일 --> 
-            <td>  <!-- 첨부 파일 --> 
+            <td> <!-- 첨부 파일 --> 
             <c:if test="${ not empty row.ofile }">
                 <a href="../freeboard/download.do?ofile=${ row.ofile }&sfile=${ row.sfile }&num=${ row.num }">[Down]</a>
             </c:if>
@@ -81,7 +81,7 @@
                 onclick="location.href='../freeboard/write.do'">글쓰기</button></td>
         </tr>
     </table>
-    
+    <br>  <br>  <br>  <br>  <br>  <br>  <br><br>  <br>  <br>  <br>  <br>  <br>  <br>
     <%@ include file="../Solo/Footer.jsp" %>
 </body>
 </html>

@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%-- <%@ include file="./IsLoggedIn.jsp" %>  <!-- 로그인 확인 --> --%>
+<%@ include file="./IsLoggedIn.jsp" %>  <!-- 로그인 확인 -->
+<%
+String userID = (String) session.getAttribute("userid");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,12 +11,12 @@
 <script type="text/javascript">
 		function validateForm (form){
 			if(!form.title.value){
-				alert("제목을 입력하새요");
+				alert("제목을 입력하세요");
 				form.title.focus();
 				return false;
 			}
 			if(!form.content.value){
-				alert("내용 입력하새요");
+				alert("내용 입력하세요");
 				form.content.focus();
 				return false;
 			}
@@ -38,9 +41,10 @@
 		<tr>
 			<td>작성자</td>
 			<td>
-				<!-- 로그인한 계정의 id 를 가져와야됨 -->
-				<%-- ${dto.userid } --%>
-				<input name="userid" type="text" value="test" > 
+				&nbsp&nbsp<% out.print(userID); %>
+				<input type="hidden" name = "userid" value = "<%=userID%>">
+				
+				<!-- 세션에서 userid 받아와서 userid 에 입력 -->
 			</td>
 		</tr>
 		<tr>

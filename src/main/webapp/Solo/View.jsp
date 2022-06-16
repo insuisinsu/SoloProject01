@@ -73,8 +73,8 @@
 	//      Bbs bbs = new BbsDAO().getBbs(bbsID);
 	//        if (!userID.equals(bbs.getUserID())) { // !userID세션값과 bbs.getUserID 작성한사람 동일한지
 		%>
-			<button type ="button" onclick = "location.href='../freeboard/edit.do?num=${param.num }';">수정하기</button>
-			<button type ="button" onclick = "location.href='../freeboard/delete.do?num=${param.num }';">삭제하기</button>
+			<button type ="button" onclick = "location.href='../freeboard/update.do?num=${param.num }';">수정하기</button>
+			<button type ="button" onclick = "location.href='../freeboard/deleteBoard.do?num=${param.num }';">삭제하기</button>
 	
 		<!-- 
 			수정하기, 삭제하기 버튼 수정해야함-->

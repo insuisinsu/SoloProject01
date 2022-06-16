@@ -1,3 +1,5 @@
+<%@ page import="utils.CookieManager" %>
+<%@ page import="utils.JSFunction" %>
 <%@ page import="account.AccountDTO" %>
 <%@ page import="account.AccountDAO" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -6,6 +8,7 @@
 //로그인 폼으로부터 받은 아이디와 패스워드
 String userid = request.getParameter("userid");
 String userpw = request.getParameter("userpw");
+String save_check = request.getParameter("save_check");
 
 String oracleDriver = application.getInitParameter("OracleDriver");
 String oracleURL = application.getInitParameter("OracleURL");
@@ -26,6 +29,14 @@ dao.close();
 //로그인 성공 여부에 따른 처리
 if(accountDTO.getUserId() != null){
 	//로그인 성공 - memberDTO 에 id 값이 있다 = 아이디 패스워드가 일치하여 회원의 객체를 가져왔다
+	//쿠키 생성 및 제거
+	if(save_check != null && save_check.equals("Y")){
+		CookieManager.makeCookie(response,"loginId", userid, 86400);
+		out.print("쿠키 생성");
+	}else{
+		CookieManager.deleteCookie(response, "loginId");
+		out.print("쿠키 삭제");
+	}
 	// 로그인 성공했으니 session 에 아이디 패스워드를 저장함
 	// session 영역은 브라우저를 닫을 때 까지 모든 페이지에서 공유됨
 	session.setAttribute("userid", accountDTO.getUserId());
