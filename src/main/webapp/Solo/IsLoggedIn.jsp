@@ -2,7 +2,11 @@
 
 <%
 if(session.getAttribute("userid") == null){
-	JSFunction.alertLocation(response, "fhrmdlsdl vlfdygkqslek.", "../Solo/Login.jsp");
+	JSFunction.alertLocation(response, "login ha3.", "../Solo/Login.jsp");
 	return;
 }
 %>
+
+
+
+

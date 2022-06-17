@@ -103,12 +103,6 @@ public class UpdateController extends HttpServlet{
 			dto.setOfile(prevOfile);
 			dto.setSfile(prevSfile);
 		}
-		System.out.println(dto.getContent());
-		System.out.println(dto.getDowncount());
-		System.out.println(dto.getNum());
-		System.out.println(dto.getTitle());
-		System.out.println(dto.getUserid());
-		System.out.println(dto.getVisitcount());
 		//DB에 수정 내용을 반영 (DTO 에 저장된 값을 DAO 의 메소드의 매개변수로 전달)
 		FreeboardDAO dao = new FreeboardDAO();
 		int result = dao.updateBoard(dto);		//result 가 1이면 update 성공, 0이면 update 실패
@@ -120,7 +114,7 @@ public class UpdateController extends HttpServlet{
 			resp.sendRedirect("../freeboard/view.do?num=" + num);
 		}else {
 			JSFunction.alertLocation(resp, "수정에 실패했습니다.",
-					"../freeboard.do?num=" + num);
+					"../freeboard/view.do?num=" + num);
 		}
 		
 		

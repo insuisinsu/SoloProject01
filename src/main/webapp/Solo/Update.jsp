@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%-- <%@ include file="./IsLoggedIn.jsp" %>  <!-- 로그인 확인 --> --%>
+
+<%@ include file="./IsLoggedIn.jsp" %>  <!-- 로그인 확인 -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +40,8 @@ function validateForm (form){
 			<td>작성자</td>
 			<td>
 				${dto.userid }
-				<input type="hidden" name="userid" value="${dto.userid }" />
+			<%	String userID = (String) session.getAttribute("userid"); %>
+				<input type="hidden" name="userid" value="<%=userID %>" />
 			</td>
 		</tr>
 		<tr>
@@ -60,7 +62,7 @@ function validateForm (form){
 			<td colspan="2" align="center">
 				<button type="submit">작성 완료</button>
 				<button type="reset">다시 입력</button>
-				<button type="button" onclick="location.href='List.do';">목록 보기</button>
+				<button type = "button" onclick = "location.href='../freeboard/list.do';">목록 바로가기</button>
 			</td>
 		</tr>
 	</table>
