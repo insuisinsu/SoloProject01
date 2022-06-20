@@ -31,16 +31,13 @@ if(accountDTO.getUserId() != null){
 	//로그인 성공 - memberDTO 에 id 값이 있다 = 아이디 패스워드가 일치하여 회원의 객체를 가져왔다
 	//쿠키 생성 및 제거
 	if(save_check != null && save_check.equals("Y")){
-		CookieManager.makeCookie(response,"loginId", userid, 86400);
-		out.print("쿠키 생성");
+		CookieManager.makeCookie(response,"loginID", userid, 86400);
 	}else{
-		CookieManager.deleteCookie(response, "loginId");
-		out.print("쿠키 삭제");
+		CookieManager.deleteCookie(response, "loginID");
 	}
 	// 로그인 성공했으니 session 에 아이디 패스워드를 저장함
 	// session 영역은 브라우저를 닫을 때 까지 모든 페이지에서 공유됨
 	session.setAttribute("userid", accountDTO.getUserId());
-	session.setAttribute("username", accountDTO.getUserName());
 	response.sendRedirect("Index.jsp");
 	out.println("로그인 성공");
 }else{

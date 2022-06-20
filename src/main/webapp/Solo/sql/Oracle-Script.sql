@@ -9,7 +9,7 @@ Create table useraccount(
 );
 
 insert into useraccount(idx, userid, userpw, username, useremail, userregidate)
-values(seq_user_num.nextval, 'test', '1234', 'name2', 'email3', sysdate);
+values(seq_user_num.nextval, 'DDD', '1234', 'ddd', 'email.D', sysdate);
 create sequence seq_user_num
     increment by 1
     start with 1
@@ -30,15 +30,17 @@ create table freeboard(
     downcount number(5) default 0 not null
 );
 insert into freeboard(num, title, content, userid)
-values(seq_freeboard_num.nextval, '力格11', '郴侩11', 'test');
+values(seq_freeboard_num.nextval, '力格11', '郴侩11', 'DDD');
 insert into freeboard(num, title, content, userid)
-values(seq_freeboard_num.nextval, '力格22', '郴侩22', 'test');
+values(seq_freeboard_num.nextval, '力格22', '郴侩22', 'DDD');
 insert into freeboard(num, title, content, userid)
-values(seq_freeboard_num.nextval, '力格33', '郴侩33', 'test');
+values(seq_freeboard_num.nextval, '力格33', '郴侩33', 'DDD');
 insert into freeboard(num, title, content, userid)
-values(seq_freeboard_num.nextval, '力格44', '郴侩44', 'test');
+values(seq_freeboard_num.nextval, '力格44', '郴侩44', 'DDD');
 insert into freeboard(num, title, content, userid)
-values(seq_freeboard_num.nextval, '力格55', '郴侩55', 'test');
+values(seq_freeboard_num.nextval, '力格55', '郴侩55', 'DDD');
+insert into freeboard(num, title, content, userid)
+values(seq_freeboard_num.nextval, '力格66', '郴侩66', 'DDD');
 
 alter table freeboard
     add constraint freeboard_user_fk foreign key (userid)
@@ -63,6 +65,5 @@ select * from freeboard;
 desc freeboard;
 commit;
 
-UPDATE freeboard
-SET title='avbcshdj', content='abcdefg, userid='test'
-WHERE num='2'
+
+

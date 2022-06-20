@@ -25,6 +25,7 @@
             <li><a href="../Solo/Login.jsp">Login</a></li>
             <li><a href="../Solo/CreateAccount.jsp">Create Account</a></li>
 		<%	} else { %>
+            <li><%= session.getAttribute("userid") %></a></li>
             <li><a href="../Solo/Logout.jsp">Logout</a></li>
 		<% } %>
         </ul>

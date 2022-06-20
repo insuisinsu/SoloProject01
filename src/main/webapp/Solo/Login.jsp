@@ -2,7 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ page import="utils.CookieManager" %>
 <%
-String loginId = CookieManager.readCookie(request, "loginID");
+//쿠키 이름이 loginID
+String loginId = CookieManager.readCookie(request, "loginID");	
 String cookieCheck="";
 if(!loginId.equals("")){
 	cookieCheck="checked";
@@ -33,9 +34,6 @@ function validateForm(form){
 <!-- Header -->
 <%@ include file="../Solo/Header.jsp" %>
 
-<!-- 로그인 상태 확인 -->
-
-
 
 <!-- 로그인 폼 -->
 
@@ -45,9 +43,9 @@ function validateForm(form){
 		onsubmit="return validateForm(this);">
 		<fieldset>
 			아이디 저장하기 
-			<input type="checkbox" class="check" name="save_check" value="Y" <%= loginId %> />
+			<input type="checkbox" class="check" name="save_check" value="Y" <%= cookieCheck %> />
 			<label for="userid">아이디</lable>
-			<input type="text" name="userid" placeholder="아이디를 입력하세요.">
+			<input type="text" name="userid" placeholder="아이디를 입력하세요." value="<%= loginId %>">
 			<label for="userpw">비밀번호</label>
 			<input type="password" name="userpw" placeholder="비밀번호를 입력하세요.">
 			<ul>
